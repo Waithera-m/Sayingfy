@@ -8,9 +8,14 @@
   background-repeat: no-repeat;
 }
 
-#title {
+.title {
   text-align: center;
   color: white;
   font-size: 300%;
+  font-family: 'Baloo 2', cursive;
+  margin-top:50px;
+}
+
+body {
   font-family: 'Baloo 2', cursive;
 }
