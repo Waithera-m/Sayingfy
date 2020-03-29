@@ -5,8 +5,10 @@
       <ul class="quotes">
         <li *ngFor="let quote of quotes">
           <span class="badge">{{quote.title | titlecase}} </span>
+          <app-quote-details [quote]='quote'></app-quote-details>
         </li>
       </ul>
+      
     </div>
   </div>
 </div>
