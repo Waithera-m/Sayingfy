@@ -6,7 +6,7 @@
         <div *ngFor='let quote of quotes; let i = index'>
           <li class="badge">{{quote.title | uppercase}}</li>
           <button (click)="showQuote(i)">View Quote</button>           
-          <app-quote-details  *ngIf="quote.showQuoteDetails" [quote]='quote'></app-quote-details>
+          <app-quote-details  *ngIf="quote.showQuoteDetails" [quote]='quote' (isRead)="quoteBeGone($event, i)"></app-quote-details>
           
         </div>
       </ul>

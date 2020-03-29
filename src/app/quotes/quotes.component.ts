@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SampleQuotes } from '../sample-quotes';
+import Swal from 'sweetalert2';
+import { UpperCasePipe } from '@angular/common';
 
 
 
@@ -22,6 +24,33 @@ export class QuotesComponent implements OnInit {
   
   showQuote(index) {
     this.quotes[index].showQuoteDetails = !this.quotes[index].showQuoteDetails;
+  }
+
+  quoteBeGone(isRead, index){
+    if(isRead){
+
+      
+      let toDelete = Swal.fire({
+        text: `Are you sure you want to delete ${this.quotes[index].quote}?`,
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: 'primary',
+        cancelButtonColor: 'danger',
+        cancelButtonText: 'Cancel',
+        reverseButtons: true
+      }).then((result) => {
+        if(result.value) {
+          Swal.fire('Quote Deleted', 'success')
+        }else if(result.dismiss === Swal.DismissReason.cancel){
+          Swal.fire('Your quote is safe!')
+        }
+      })
+
+      if(toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
+    
   }
 
   constructor() { }
