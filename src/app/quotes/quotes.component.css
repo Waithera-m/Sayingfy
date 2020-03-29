@@ -10,8 +10,8 @@
   padding: 5px 0;
   margin-left: -33px;
   width: 200px;
-  height: 50px;
-  font-size: x-large;
+  height: 37px;
+  font-size: larger;
 }
 .quotes li:hover {
   color: white;

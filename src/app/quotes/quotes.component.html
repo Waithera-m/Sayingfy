@@ -3,12 +3,13 @@
     <div class="col-md-6">
       <h2>Quotes</h2>
       <ul class="quotes">
-        <li *ngFor="let quote of quotes">
-          <span class="badge">{{quote.title | titlecase}} </span>
-          <app-quote-details [quote]='quote'></app-quote-details>
-        </li>
+        <div *ngFor='let quote of quotes; let i = index'>
+          <li class="badge">{{quote.title | titlecase}}</li>
+          <button (click)="showQuote(i)">View Quote</button>           
+          <app-quote-details *ngIf="quote.showQuote" [quote]='quote'></app-quote-details>
+          
+        </div>
       </ul>
-      
     </div>
   </div>
 </div>

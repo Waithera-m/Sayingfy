@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { QuotesShare } from '../quotes-share';
-import { QUOTES } from '../existing-quotes';
+import { SampleQuotes } from '../sample-quotes';
+
 
 @Component({
   selector: 'app-quote-details',
@@ -9,7 +9,7 @@ import { QUOTES } from '../existing-quotes';
 })
 export class QuoteDetailsComponent implements OnInit {
 
-  @Input() quote: QuotesShare;
+  @Input() quote: SampleQuotes;
 
   constructor() { }
 
