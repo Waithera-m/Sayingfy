@@ -54,6 +54,11 @@ export class QuotesComponent implements OnInit {
     
   }
 
+  addAddedQuote(quote){
+    quote.dateCreated = new Date(quote.dateCreated)
+    this.quotes.push(quote)
+  }
+
   constructor() { }
 
   ngOnInit(): void {

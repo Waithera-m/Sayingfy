@@ -1,7 +1,7 @@
 <p><em>"{{quote.quote}}"</em></p>
 <p>Author: {{quote.author}}</p>
 <p>Added On: {{quote.dateCreated | date}}</p>
-<p>Added By: {{quote.addedBy}}, {{quote.dateCreated | countDays}} days ago</p>
+<p>Added By: {{quote.addedBy}}, {{quote.dateCreated | countDays | number:'1.0-0'}} days ago</p>
 <p>Votes: {{votes}}</p>
 <p>Upvotes: {{upvotes}}</p>
 <p>Downvotes: {{downvotes}}</p>
