@@ -7,6 +7,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { CountDaysPipe } from './count-days.pipe';
 import { HighlightMostUpvotesDirective } from './highlight-most-upvotes.directive';
+import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HighlightMostUpvotesDirective } from './highlight-most-upvotes.directiv
     QuotesComponent,
     QuoteDetailsComponent,
     CountDaysPipe,
-    HighlightMostUpvotesDirective
+    HighlightMostUpvotesDirective,
+    QuotesFormComponent
   ],
   imports: [
     BrowserModule,
