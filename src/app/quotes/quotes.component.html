@@ -1,15 +1,24 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-      <h2>Quotes</h2>
-      <ul class="quotes">
-        <div *ngFor='let quote of quotes; let i = index'>
-          <li class="badge">{{quote.title | uppercase}}</li>
-          <button (click)="showQuote(i)">View Quote</button>           
-          <app-quote-details  *ngIf="quote.showQuoteDetails" [quote]='quote' (isRead)="quoteBeGone($event, i)"></app-quote-details>
-          
-        </div>
-      </ul>
+<div class="container" id="about">
+  <p>Welcome to Sayingfy!</p>
+  <p>Where you can vote on the quotes added by other users</p>
+  <p>And share the quotes that are closest to your heart</p>
+</div>
+<div class="parallax">
+ 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Quotes</h2>
+        <ul class="quotes">
+          <div *ngFor='let quote of quotes; let i = index'>
+            <li class="badge">{{quote.title | uppercase}}</li>
+            <button (click)="showQuote(i)">View Quote</button>           
+            <app-quote-details  *ngIf="quote.showQuoteDetails" [quote]='quote' (isRead)="quoteBeGone($event, i)"></app-quote-details>
+            
+          </div>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
+

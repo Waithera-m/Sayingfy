@@ -1,3 +1,18 @@
+.parallax {
+  background-image: url("https://bit.ly/2w2EzIO");
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about {
+  text-align: center;
+  font-family: 'Baloo 2', cursive;
+  font-size: larger;
+}
+
 .quotes {
   list-style-type: none;
 }
@@ -16,4 +31,7 @@
 .quotes li:hover {
   color: white;
   background-color: rgb(39, 38, 36);
+}
+body {
+  color:white;
 }
