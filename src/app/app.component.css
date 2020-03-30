@@ -19,3 +19,9 @@
 body {
   font-family: 'Baloo 2', cursive;
 }
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 4rem 2rem;
+  }
+}

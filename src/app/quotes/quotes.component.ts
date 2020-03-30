@@ -31,7 +31,7 @@ export class QuotesComponent implements OnInit {
 
       
       let toDelete = Swal.fire({
-        text: `Are you sure you want to delete:  ${this.quotes[index].quote}?`,
+        text: `Are you sure you want to delete:  "${this.quotes[index].quote}"?`,
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: 'primary',
