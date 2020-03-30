@@ -2,14 +2,15 @@
 <p>Author: {{quote.author}}</p>
 <p>Added On: {{quote.dateCreated | date}}</p>
 <p>Added By: {{quote.addedBy}}, {{quote.dateCreated | countDays}} days ago</p>
-<p>Upvotes: </p>
-<p>Downvotes: </p>
+<p>Votes: {{votes}}</p>
+<p>Upvotes: {{upvotes}}</p>
+<p>Downvotes: {{downvotes}}</p>
 <div class="row">
   <div class="col-md-4">
-    <button class="btn btn-info">Upvote</button>
+    <button class="btn btn-info" (click)="liked()">Upvote</button>
   </div>
   <div class="col-md-4">
-    <button class="btn btn-info">Downvote</button>
+    <button class="btn btn-info" (click)="disliked()">Downvote</button>
   </div>
   <div class="col-md-4">
     <button class="btn btn-danger" (click)="deleteQuote(true)">Delete Quote</button>

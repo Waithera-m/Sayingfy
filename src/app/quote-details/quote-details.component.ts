@@ -8,6 +8,10 @@ import { SampleQuotes } from '../sample-quotes';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
+  
+  upvotes: number;
+  downvotes: number;
+  votes: number;
 
   @Input() quote: SampleQuotes;
   @Output() isRead = new EventEmitter<boolean>();
@@ -18,9 +22,31 @@ export class QuoteDetailsComponent implements OnInit {
     this.isRead.emit(read);
   }
 
-  constructor() { }
+  constructor() { 
+    
+  }
+
+ 
+  
 
   ngOnInit(): void {
+    
+    this.downvotes = 0;
+    this.upvotes = 0;
+    this.votes = 0;
+
+    
+  }
+
+  liked(): boolean{
+    this.upvotes +=1;
+    this.votes +=1;
+    return false;
+  }
+  disliked(): boolean {
+    this.downvotes -= 1;
+    this.votes -=1;
+    return false;
   }
 
 }
