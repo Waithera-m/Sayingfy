@@ -1,11 +1,10 @@
-<p>"{{quote.quote}}"</p>
+<p><em>"{{quote.quote}}"</em></p>
 <p>Author: {{quote.author}}</p>
 <p>Added On: {{quote.dateCreated | date}}</p>
 <p>Added By: {{quote.addedBy}}, {{quote.dateCreated | countDays}} days ago</p>
 <p>Votes: {{votes}}</p>
 <p>Upvotes: {{upvotes}}</p>
 <p>Downvotes: {{downvotes}}</p>
-console.log(quote.upvotes)
 <div class="row">
   <div class="col-md-4">
     <button class="btn btn-info" (click)="liked()">Upvote</button>
