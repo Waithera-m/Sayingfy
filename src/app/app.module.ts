@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { CountDaysPipe } from './count-days.pipe';
+import { HighlightMostUpvotesDirective } from './highlight-most-upvotes.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuotesComponent,
     QuoteDetailsComponent,
-    CountDaysPipe
+    CountDaysPipe,
+    HighlightMostUpvotesDirective
   ],
   imports: [
     BrowserModule,
