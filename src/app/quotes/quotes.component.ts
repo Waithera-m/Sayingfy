@@ -26,26 +26,30 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].showQuoteDetails = !this.quotes[index].showQuoteDetails;
   }
 
+  //Condirm and delete quote
+  
+  
   quoteBeGone(isRead, index){
+    event.preventDefault();
     if(isRead){
-
-      
-      let toDelete = Swal.fire({
-        text: `Are you sure you want to delete:  "${this.quotes[index].quote}"?`,
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: 'primary',
-        confirmButtonText: 'Yes Delete Quote',
-        cancelButtonColor: 'danger',
-        cancelButtonText: 'Cancel',
-        reverseButtons: true
-      }).then((result) => {
-        if(result.value) {
-          Swal.fire('Quote Deleted', 'success')
-        }else if(result.dismiss === Swal.DismissReason.cancel){
-          Swal.fire('Your quote is safe!')
-        }
-      })
+      let toDelete = confirm(`Are you sure you want to delete:  ${this.quotes[index].title}?`)
+      // let toDelete = Swal.fire({
+      //   text: `Are you sure you want to delete:  ${this.quotes[index].title}?`,
+      //   icon: 'warning',
+      //   showCancelButton: true,
+      //   confirmButtonColor: 'primary',
+      //   confirmButtonText: 'Delete Quote',
+      //   cancelButtonColor: 'danger',
+      //   cancelButtonText: 'Cancel',
+      //   reverseButtons: true,
+        
+      // }).then((willDelete) => {
+      //   if(willDelete) {
+      //     Swal.fire('Quote Deleted', 'success')
+      //   }else {
+      //     Swal.fire('Your quote is safe!')
+      //   }
+      // })
 
       if(toDelete){
         this.quotes.splice(index,1)
@@ -53,12 +57,13 @@ export class QuotesComponent implements OnInit {
     }
     
   }
-
+//Push users' quotes to quotes array
   addAddedQuote(quote){
     quote.dateCreated = new Date(quote.dateCreated)
     this.quotes.push(quote)
   }
 
+  //Loop through array and return quote with the highest number of upvotes
   prevVote=0
   currentVote=0
   counter=0
@@ -74,7 +79,7 @@ export class QuotesComponent implements OnInit {
       }
       return this.prevVote
       
-    }console.log(this.prevVote)
+    }
   }
 
   constructor() { }
