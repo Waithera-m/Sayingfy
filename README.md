@@ -8,14 +8,14 @@ To use the application, users need internet access and web browsers, preferably 
 ## Known Bugs
 All known bugs have been fixed, but if you encounter any please notify the creator.
 ## Behavior Driven Development (BDD)
-|Behavior             |Input                                           |Output                                                      |
+|Behavior                |Input                                           |Output                                                      |
 |-----------------------|-------------------------------------------|------------------------------------------------------------|
-|The landing page loads |Users scroll and click on view quote button|Users see quotes' content view and the vote and delete buttons, users click on the upvote buttton to upvote quote, the downvote button to downvote quotes, or delete button to delete quotes|
-|The landing page loads|Users navigate to the form on the right side of the page|Users fill the form inputs and click on the Add Quote button to add their quotes|
+|The landing page loads |Users scroll and click on view quote button|Users see quotes' content, creation date, and number of votes. They also see the vote and delete buttons, users click on the upvote buttton to upvote quotes, the downvote button to downvote quotes, or delete button to delete quotes|
+|The landing page loads|Users navigate to the form, which is on the right side of the page|Users fill the form inputs and click on the Add Quote button to add their quotes|
 ## Technologies Used
 * HTML - HTML dictates the structure of webpages. The hypertext language was used to create the form to collect users date. 
 * CSS & Bootstrap - CSS determines the appearance of webpages. The styling language was used to add background images and colors and style the site's content.
-* Angular-Cli - version 9.0.5. -  The Javascript framework was used collect and display data, determine how data is displayed and the general behaviof of the page
+* Angular-Cli - version 9.0.5. -  The Javascript framework was used collect and display data, determine how data is displayed and the general behavior of the page
 ## Support and contact details
 You are free to suggest and improve the code. To make your changes:
 * Fork the repo
