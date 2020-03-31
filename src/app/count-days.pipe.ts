@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'countDays'
 })
 export class CountDaysPipe implements PipeTransform {
-
+//calculate the difference between quote's creation date and current date and return this difference when pipe is used in the html file
   transform(value: any): number {
     let today:Date = new Date();
     let todayMonthDateDay: any = new Date(today.getFullYear(), today.getMonth(), today.getDate());
