@@ -61,19 +61,20 @@ export class QuotesComponent implements OnInit {
 
   prevVote=0
   currentVote=0
-  index=0
+  counter=0
 
   mostUpvotes(){
     this.prevVote=0
     this.currentVote=0
 
-    for(this.index=0; this.index < this.quotes.length; this.index++){
-      this.currentVote = this.quotes[this.index].upvotes;
+    for(this.counter=0; this.counter < this.quotes.length; this.counter++){
+      this.currentVote = this.quotes[this. counter].upvotes;
       if(this.currentVote > this.prevVote){
         this.prevVote = this.currentVote
       }
       return this.prevVote
-    }
+      
+    }console.log(this.prevVote)
   }
 
   constructor() { }
