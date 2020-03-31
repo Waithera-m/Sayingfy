@@ -5,6 +5,7 @@
   <p>And share the quotes that are closest to your heart</p>
 </div>
 
+<!--Add scrolling effect-->
 <div class="parallax">
  
   <div class="container">
@@ -13,7 +14,9 @@
         <h2>Quotes</h2>
         <hr>
         <ul class="quotes">
+          
           <div *ngFor='let quote of quotes; let i = index'>
+            <!--custome directive-->
             <li appHighlightMostUpvotes class="badge">{{quote.title | uppercase}}</li>
             <button (click)="showQuote(i)">View Quote</button>           
             <app-quote-details  *ngIf="quote.showQuoteDetails" [quote]='quote' (isRead)="quoteBeGone($event, i)"></app-quote-details>

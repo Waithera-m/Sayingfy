@@ -9,7 +9,7 @@ import { SampleQuotes } from '../sample-quotes';
 export class QuotesFormComponent implements OnInit {
 
 
-  newQuote = new SampleQuotes("","","", new Date, "");
+  newQuote = new SampleQuotes("","","", new Date, "", 0);
   @Output() addQuote = new EventEmitter<SampleQuotes>();
 
   submitQuote(){
