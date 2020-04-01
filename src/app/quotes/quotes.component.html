@@ -24,7 +24,7 @@
             <p *ngIf="mostUpvotes()===quote.upvotes && quote.upvotes>0"></p>
             <li appHighlightMostUpvotes class="badge">{{quote.title | uppercase}}</li>
              
-            <button (click)="showQuote(i)">View Quote</button> 
+            <button class="btn btn-dark" (click)="showQuote(i)">View Quote</button> 
 
    <!--Nest quote-content, quote-details, and quote-form components and show and hide quote content and details-->
             <app-quote-content *ngIf="quote.showQuoteDetails" [quote]='quote'></app-quote-content>          
@@ -33,6 +33,7 @@
           </div>
         </ul>
       </div>
+     
       <div class="col-md-6">
         <app-quotes-form (addQuote)="addAddedQuote($event)"></app-quotes-form>
       </div>
