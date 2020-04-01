@@ -17,7 +17,7 @@
           
           <div *ngFor='let quote of quotes; let i = index'>
             
-            <!--custom directive-->
+            <!--Incorporate custom directive-->
             <div>
               
             </div>
@@ -25,6 +25,8 @@
             <li appHighlightMostUpvotes class="badge">{{quote.title | uppercase}}</li>
              
             <button (click)="showQuote(i)">View Quote</button> 
+
+   <!--Nest quote-content, quote-details, and quote-form components and show and hide quote content and details-->
             <app-quote-content *ngIf="quote.showQuoteDetails" [quote]='quote'></app-quote-content>          
             <app-quote-details *ngIf="quote.showQuoteDetails" [quote]='quote' (isRead)="quoteBeGone($event, i)"></app-quote-details>
             

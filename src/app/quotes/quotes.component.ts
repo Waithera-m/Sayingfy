@@ -33,6 +33,8 @@ export class QuotesComponent implements OnInit {
     event.preventDefault();
     if(isRead){
       let toDelete = confirm(`Are you sure you want to delete:  ${this.quotes[index].title}?`)
+      
+      //Use SweetAlert to confirm quote deletion
       // let toDelete = Swal.fire({
       //   text: `Are you sure you want to delete:  ${this.quotes[index].title}?`,
       //   icon: 'warning',

@@ -10,8 +10,10 @@ import { NgForm } from '@angular/forms';
 })
 export class QuotesFormComponent implements OnInit {
 
-
+  //newquote template
   newQuote = new SampleQuotes("","","", new Date, "", 0);
+  
+  //submit form
   @Output() addQuote = new EventEmitter<SampleQuotes>();
 
   

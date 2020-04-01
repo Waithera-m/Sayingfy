@@ -9,7 +9,7 @@ export class HighlightMostUpvotesDirective {
   constructor(private elem:ElementRef) {this.elem.nativeElement.style.backgroundColor='lightblue'}
 
 
-  //future implementation:; figure out how to use hostbinding and listener to highlight only the quote with the highest number of upvotes.
+  //future implementation: figure out how to use hostbinding and listener to highlight only the quote with the highest number of upvotes.
   // @HostBinding('attr.upvotes') color: string;
 
   // @HostListener('click') onmostUpvotes(){
