@@ -15,7 +15,7 @@ To use the application, users need internet access and web browsers, preferably 
 ## Technologies Used
 * HTML - HTML dictates the structure of webpages. The hypertext language was used to create the form to collect users date. 
 * CSS & Bootstrap - CSS determines the appearance of webpages. The styling language was used to add background images and colors and style the site's content.
-* [Angular-Cli](https://angular.io/) - version 9.0.5. -  The Javascript framework was used to collect and display data, determine how data is displayed and the general behavior of the page
+* [Angular-Cli](https://angular.io/) - version 9.0.5. -  Angular is a TypeScript-based framework. The framework's components were used to refactor code and promote code maintenance. Inbuilt and custom directives, such as ngFor and ngIf, in turn, were used to loop through the quotes array, to determine when users could see quote details, such as date, author, and votes, to validate the form, and to add new quotes. A custom pipe was also used to calculate and display the number of days that had elapsed since each quote was added. 
 ## Support and contact details
 You are free to suggest and improve the code. To make your changes:
 * Fork the repo
