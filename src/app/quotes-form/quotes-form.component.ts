@@ -16,10 +16,14 @@ export class QuotesFormComponent implements OnInit {
   //submit form
   @Output() addQuote = new EventEmitter<SampleQuotes>();
 
-  
+  quotesForm: NgForm;
 
   submitQuote(){
     this.addQuote.emit(this.newQuote);
+    if(this.quotesForm.valid){
+      this.quotesForm.reset();
+    }
+    
   }
   
  

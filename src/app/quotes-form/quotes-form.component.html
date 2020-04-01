@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h2 class="text-center">Upload Quote</h2>
   <hr>
-  <form (ngSubmit)='submitQuote()' #quotesForm='ngForm'>
+  <form (ngSubmit)="submitQuote()" #quotesForm="ngForm">
     <div class="form-group">
       <label for="title">Quote Title:</label>
       <input type="text"  class="form-control" id="title" [(ngModel)]="newQuote.title" name="title" #title='ngModel' required>
@@ -50,7 +50,6 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <button class="btn btn-dark">Add Quote</button>
-        
       </div>
       <div class="col-md-4"></div>
     </div>
