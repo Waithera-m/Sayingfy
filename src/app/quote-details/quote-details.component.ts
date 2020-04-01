@@ -9,25 +9,26 @@ import { SampleQuotes } from '../sample-quotes';
 })
 export class QuoteDetailsComponent implements OnInit {
   
-  upvotes: number;
-  downvotes: number;
-  votes: number;
+ 
 
   @Input() quote: SampleQuotes;
+ 
   @Output() isRead = new EventEmitter<boolean>();
 
   
-
+//delete quote
   deleteQuote(read:boolean){
     this.isRead.emit(read);
   }
-
+ 
   constructor() { 
     
   }
 
- 
-  
+//intialize up and downvote buttons and use click event binding to increment or decrement votes 
+  upvotes: number;
+  downvotes: number;
+  votes: number;
 
   ngOnInit(): void {
     

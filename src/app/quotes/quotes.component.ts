@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { SampleQuotes } from '../sample-quotes';
 import Swal from 'sweetalert2';
-import { UpperCasePipe } from '@angular/common';
+import { HighlightMostUpvotesDirective } from '../highlight-most-upvotes.directive';
 
 
 
@@ -67,6 +67,7 @@ export class QuotesComponent implements OnInit {
   prevVote=0
   currentVote=0
   counter=0
+  indexVotes=0
 
   mostUpvotes(){
     this.prevVote=0
@@ -76,8 +77,9 @@ export class QuotesComponent implements OnInit {
       this.currentVote = this.quotes[this. counter].upvotes;
       if(this.currentVote > this.prevVote){
         this.prevVote = this.currentVote
+        this.indexVotes = this.counter
       }
-      return this.prevVote
+      return this.quotes[this.indexVotes]
       
     }
   }
@@ -85,6 +87,15 @@ export class QuotesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.mostUpvotes()
+    
+  }
+  color= '';
+
+  ngOnchanges() {
+    if(this.prevVote > 0){
+      this.color='lightblue'
+    }
   }
 
 }

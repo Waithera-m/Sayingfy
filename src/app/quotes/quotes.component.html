@@ -1,5 +1,5 @@
 <div class="container" id="about">
-  <h2>About</h2>
+  <h2 id="About">About</h2>
   <p>Welcome to Sayingfy!</p>
   <p>Where you can vote on the quotes added by other users</p>
   <p>And share the quotes that are closest to your heart</p>
@@ -16,10 +16,12 @@
         <ul class="quotes">
           
           <div *ngFor='let quote of quotes; let i = index'>
-            <!--custom directive-->
             
+            <!--custom directive-->
             <li appHighlightMostUpvotes class="badge">{{quote.title | uppercase}}</li>
-            <button (click)="showQuote(i)">View Quote</button>           
+               
+            <button (click)="showQuote(i)">View Quote</button> 
+            <app-quote-content *ngIf="quote.showQuoteDetails" [quote]='quote'></app-quote-content>          
             <app-quote-details *ngIf="quote.showQuoteDetails" [quote]='quote' (isRead)="quoteBeGone($event, i)"></app-quote-details>
             
           </div>
