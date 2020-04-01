@@ -31,9 +31,13 @@
 }
 .quotes li:hover {
   color: white;
-  background-color: rgb(39, 38, 36);
+  background-color: rgb(139, 134, 134);
+  color: white;
 }
-
+.quotes .badge {
+  background-color: rgb(78, 75, 75);
+  color: white;
+}
 body {
   color:white;
 }
