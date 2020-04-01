@@ -6,7 +6,7 @@ The web application allows users to view sample quotes and add their own quotes.
 ## Setup/Installation Requirements
 To use the application, users need internet access and web browsers, preferably  Chrome, Safari, and Firefox.
 ## Known Bugs
-All known bugs have been fixed, but if you encounter any please notify the creator.
+* The web app does not highlight the quote with the highest number of upvotes.
 ## Behavior Driven Development (BDD)
 |Behavior                |Input                                           |Output                                                      |
 |-----------------------|-------------------------------------------|------------------------------------------------------------|

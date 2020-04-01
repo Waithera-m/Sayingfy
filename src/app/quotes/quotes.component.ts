@@ -26,7 +26,7 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].showQuoteDetails = !this.quotes[index].showQuoteDetails;
   }
 
-  //Condirm and delete quote
+  //Confirm and delete quote
   
   
   quoteBeGone(isRead, index){
@@ -90,12 +90,13 @@ export class QuotesComponent implements OnInit {
     this.mostUpvotes()
     
   }
-  color= '';
+  // //track changes and change badge color: currently not working
+  // color= '';
 
-  ngOnchanges() {
-    if(this.prevVote > 0){
-      this.color='lightblue'
-    }
-  }
+  // ngOnchanges() {
+  //   if(this.prevVote > 0){
+  //     this.color='lightblue'
+  //   }
+  // }
 
 }

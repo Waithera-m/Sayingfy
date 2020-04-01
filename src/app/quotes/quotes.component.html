@@ -18,8 +18,12 @@
           <div *ngFor='let quote of quotes; let i = index'>
             
             <!--custom directive-->
+            <div>
+              
+            </div>
+            <p *ngIf="mostUpvotes()===quote.upvotes && quote.upvotes>0"></p>
             <li appHighlightMostUpvotes class="badge">{{quote.title | uppercase}}</li>
-               
+             
             <button (click)="showQuote(i)">View Quote</button> 
             <app-quote-content *ngIf="quote.showQuoteDetails" [quote]='quote'></app-quote-content>          
             <app-quote-details *ngIf="quote.showQuoteDetails" [quote]='quote' (isRead)="quoteBeGone($event, i)"></app-quote-details>
