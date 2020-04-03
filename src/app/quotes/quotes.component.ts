@@ -89,7 +89,7 @@ export class QuotesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.mostUpvotes()
+    // this.mostUpvotes()
     
   }
   // //track changes and change badge color: currently not working

@@ -17,11 +17,10 @@
           
           <div *ngFor='let quote of quotes; let i = index'>
             
-            <!--Incorporate custom directive-->
-            <div>
-              
-            </div>
-            <p *ngIf="mostUpvotes()===quote.upvotes && quote.upvotes>0"></p>
+          <!--Incorporate custom directive-->
+            
+            <!-- <p appHighlightMostUpvotes *ngIf="mostUpvotes()===quote.upvotes && quote.upvotes>0"></p>
+              {{quote.title | uppercase}} -->
             <li appHighlightMostUpvotes class="badge">{{quote.title | uppercase}}</li>
              
             <button class="btn btn-dark" (click)="showQuote(i)">View Quote</button> 
