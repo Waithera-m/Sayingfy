@@ -1,18 +1,15 @@
 <!--Use interpolation binding to display date, when the quote was uploaded, who uploaded the quote, and the quote's author-->
-<p>Author: {{quote.author}}</p>
-<p>Added On: {{quote.dateCreated | date}}</p>
-<p>Added By: {{quote.addedBy}}, {{quote.dateCreated | countDays | number:'1.0-0'}} days ago</p>
-<p>Votes: {{votes}}</p>
-<p>Upvotes: {{upvotes}}</p>
-<p>Downvotes: {{downvotes}}</p>
+<p>Votes: {{votes}}   Upvotes: {{upvotes}}   Downvotes: {{downvotes}}</p>
+<p></p>
+<p></p>
 
 <!-- Create upvote, downvote, and delete buttons and use unique event handlers to capture click events -->
 <div class="row">
   <div class="col-md-4">
-    <button class="btn btn-dark" (click)="liked()">Upvote</button>
+    <button class="btn btn-dark" (click)="liked()"><span class="iconify mr-2" style="color: rgb(255, 153, 0); font-size: x-large;" data-icon="fa-solid:thumbs-up" data-inline="false"></span>Upvote</button>
   </div>
   <div class="col-md-4">
-    <button class="btn btn-dark" (click)="disliked()">Downvote</button>
+    <button class="btn btn-dark" (click)="disliked()"><span class="iconify mr-2" style="color: rgb(255, 153, 0); font-size: x-large;" data-icon="fa-thumbs-down" data-inline="false"></span>Downvote</button>
   </div>
   <div class="col-md-4">
     <button class="btn btn-danger" (click)="deleteQuote(true)">Delete Quote</button>

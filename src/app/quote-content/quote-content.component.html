@@ -1,2 +1,8 @@
 <!--Use interpolation binding to display actual quote content-->
-<p><em>"{{quote.quote}}"</em></p>
+<blockquote class="blockquote">
+    <p>"{{quote.quote}}"</p>
+    <footer class="blockquote-footer">
+        <p style="float: right;">{{quote.author}}</p>
+        <p style="color: black;">Added By: {{quote.addedBy}}, {{quote.dateCreated | countDays | number:'1.0-0'}} days ago</p>
+    </footer>
+</blockquote>

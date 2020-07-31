@@ -1,5 +1,4 @@
 <!--Link font awesome cdn-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <!--Navbar-->
@@ -8,36 +7,32 @@
   <links>
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link waves-light" href="#" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link waves-light" routerLink="" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light" href="#" mdbWavesEffect>About</a>
-      </li>
+        <a class="nav-link waves-light" routerLink="/view" mdbWavesEffect>Available Quotes</a></li>
       <li class="nav-item">
-        <a class="nav-link waves-light" href="#" mdbWavesEffect>Quotes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-light" href="#" mdbWavesEffect>Upload Quote</a>
+        <a class="nav-link waves-light" routerLink="/add" mdbWavesEffect>Upload Quote</a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto nav-flex-icons">
       <li class="nav-item">
-        <a class="nav-link">
+        <a class="nav-link" href="https://twitter.com">
           <mdb-icon fab icon="twitter"></mdb-icon>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">
+        <a class="nav-link" href="https://plus.google.com">
           <mdb-icon fab icon="google-plus"></mdb-icon>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">
+        <a class="nav-link" href="https://www.instagram.com/">
           <mdb-icon fab icon="instagram"></mdb-icon>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">
+        <a class="nav-link" href="https://www.facebook.com">
           <mdb-icon fab icon="facebook"></mdb-icon>
         </a>
       </li>
@@ -45,14 +40,12 @@
   </links>
 </mdb-navbar>
 
-
 <div class="jumbotron">
   <h1 class="title">{{title}}</h1>
   <h2 class="motto">Some Quotes Are Worth Sharing  <i class="far fa-comments"></i></h2>
   
 </div>
-<app-quotes></app-quotes>
-
+<router-outlet></router-outlet>
 <footer class="container" style="text-align: center;">
   <p>&copy; Waithera-m 2020</p>
 </footer>
